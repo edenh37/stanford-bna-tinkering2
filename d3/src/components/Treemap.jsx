@@ -9,7 +9,7 @@ const Treemap = () => {
     const data = gdp;
 
     const width = 800;
-    const height = 400;
+    const height = 450;
 
     const transition = d3.transition().duration(1000).ease(d3.easeCubicInOut);
 

@@ -17,6 +17,8 @@ const Barchart = () => {
       width = 700 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom;
 
+    const transition = d3.transition().duration(1000).ease(d3.easeCubicInOut);
+
     // append the svg object to the body of the page
     const svg = d3
       .select(ref.current)
@@ -82,7 +84,7 @@ const Barchart = () => {
         .style("top", event.pageY - 20 + "px");
     })
     .on("mouseout", function () {
-      d3.select(this).attr("fill", "#5f0f40");
+      d3.select(this).attr("fill", color);
       tooltip.style("display", "none");
     });
 }, []);
