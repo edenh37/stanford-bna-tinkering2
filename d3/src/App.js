@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState } from "react";
 import Barchart from './components/Barchart';
 import Treemap from './components/Treemap';
+import TransitionChart from './components/transitions';
 
 function App() {
   const [selectedVis, setSelectedVis] = useState("happiness");

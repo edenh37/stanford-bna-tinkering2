@@ -57,6 +57,7 @@ const Barchart = () => {
       .style("display", "none")
       .style("pointer-events", "none");
 
+      const color = d3.scaleOrdinal(d3.schemePastel1);
     // bars
     svg
     .selectAll("rect")
@@ -66,7 +67,7 @@ const Barchart = () => {
     .attr("y", (d) => y(d.Value))
     .attr("width", x.bandwidth())
     .attr("height", (d) => height - y(d.Value))
-    .attr("fill", "#5f0f40")
+    .attr("fill", color)
     .on("mouseover", function (event, d) {
       d3.select(this).attr("fill", "blue");
       tooltip
